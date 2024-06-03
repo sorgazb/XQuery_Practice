@@ -1,4 +1,4 @@
-(:Obten el nombre del vino y su precio, solo de aquellos con DO Ribera del Guadianda
+(:Obten el nombre del vino y su precio, solo de aquellos con DO Ribera del Guadianda, ordenado por nombre
 Formato XQUERY:)
 for $vino in doc("vinos.xml")//vinos/vino
 order by $vino/nombre
