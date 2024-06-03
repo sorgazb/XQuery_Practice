@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enologia>
+  <vinos>
+    <vino DO="Rioja" cod="01">
+      <nombre>Marqués de Murrieta</nombre>
+      <tipo>Reserva</tipo>
+      <precio>16.95</precio>
+    </vino>
+    <vino DO="Ribera del Duero" cod="02">
+      <nombre>Loes Collection</nombre>
+      <tipo>Reserva</tipo>
+      <precio>34.95</precio>
+    </vino>
+    <vino DO="Ribera del Guadiana" cod="03">
+      <nombre>Acilates 2013</nombre>
+      <tipo>Reserva</tipo>
+      <precio>15.95</precio>
+    </vino>
+    <vino DO="Rioja" cod="04">
+      <nombre>Faustino</nombre>
+      <tipo>Crianza</tipo>
+      <precio>5</precio>
+    </vino>
+    <vino DO="Ribera del Duero" cod="05">
+      <nombre>Rolland Galarreta</nombre>
+      <tipo>Crianza</tipo>
+      <precio>16.99</precio>
+    </vino>
+    <vino DO="Ribera del Guadiana" cod="06">
+      <nombre>Palacio Quemado Primicia</nombre>
+      <tipo>Crianza</tipo>
+      <precio>6</precio>
+    </vino>
+    <vino DO="Rioja" cod="07">
+      <nombre>Castillo Ygay 1986</nombre>
+      <tipo> Gran Reserva</tipo>
+      <precio>49.5</precio>
+    </vino>
+    <vino DO="Ribera del Duero" cod="08">
+      <nombre>Alonso del Yerro 2012</nombre>
+      <tipo>Crianza</tipo>
+      <precio>24.95</precio>
+    </vino>
+    <vino DO="Ribera del Guadiana" cod="09">
+      <nombre>Palacio Quemado Reserva 2011</nombre>
+      <tipo>Reserva</tipo>
+      <precio>9</precio>
+    </vino>
+    <vino DO="Rioja" cod="10">
+      <nombre>Barón de Ley 2011</nombre>
+      <tipo> Reserva</tipo>
+      <precio>9.95</precio>
+    </vino>
+    <vino DO="Ribera del Duero" cod="11">
+      <nombre>Corral del Obispo</nombre>
+      <tipo>Crianza</tipo>
+      <precio>8.99</precio>
+    </vino>
+    <vino DO="Ribera del Guadiana" cod="12">
+      <nombre>Carabal Macareno 2007 Magnum 1'5L</nombre>
+      <tipo>Crianza</tipo>
+      <precio>32</precio>
+    </vino>
+    <vino DO="Ribera del Guadiana" cod="13">
+      <nombre>Jaloco</nombre>
+      <tipo>Gran Reserva</tipo>
+      <precio>29.95</precio>
+    </vino>
+  </vinos>
+  <comentarios>
+    <comentario idvino="01">
+      <texto>Excelente vino, muy buen cuerpo y sabor.</texto>
+    </comentario>
+    <comentario idvino="02">
+      <texto>Un vino extraordinario, perfecto para ocasiones especiales.</texto>
+    </comentario>
+    <comentario idvino="03">
+      <texto>Buena relación calidad-precio, ideal para cenas informales.</texto>
+    </comentario>
+    <comentario idvino="04">
+      <texto>Un vino joven, fácil de beber, pero no muy complejo.</texto>
+    </comentario>
+    <comentario idvino="05">
+      <texto>Un vino robusto con notas de fruta madura y especias.</texto>
+    </comentario>
+    <comentario idvino="06">
+      <texto>Un crianza equilibrado y accesible.</texto>
+    </comentario>
+    <comentario idvino="07">
+      <texto>Un gran reserva excepcional, muy sofisticado.</texto>
+    </comentario>
+    <comentario idvino="08">
+      <texto>Un vino elegante y bien estructurado.</texto>
+    </comentario>
+    <comentario idvino="09">
+      <texto>Un reserva decente por su precio.</texto>
+    </comentario>
+    <comentario idvino="10">
+      <texto>Un reserva clásico, con buen balance.</texto>
+    </comentario>
+    <comentario idvino="11">
+      <texto>Buen crianza, pero podría tener más profundidad.</texto>
+    </comentario>
+    <comentario idvino="12">
+      <texto>Un vino magnum que destaca en reuniones.</texto>
+    </comentario>
+    <comentario idvino="13">
+      <texto>Un gran reserva con un final largo y placentero.</texto>
+    </comentario>
+  </comentarios>
+  <puntuaciones>
+    <puntuacion id="01">
+      <revista>Wine Spectator</revista>
+      <puntos>92</puntos>
+    </puntuacion>
+    <puntuacion id="02">
+      <revista>Wine Advocate</revista>
+      <puntos>95</puntos>
+    </puntuacion>
+    <puntuacion id="03">
+      <revista>Decanter</revista>
+      <puntos>88</puntos>
+    </puntuacion>
+    <puntuacion id="04">
+      <revista>Wine Enthusiast</revista>
+      <puntos>85</puntos>
+    </puntuacion>
+    <puntuacion id="05">
+      <revista>Wine Spectator</revista>
+      <puntos>89</puntos>
+    </puntuacion>
+    <puntuacion id="06">
+      <revista>Decanter</revista>
+      <puntos>87</puntos>
+    </puntuacion>
+    <puntuacion id="07">
+      <revista>Wine Advocate</revista>
+      <puntos>97</puntos>
+    </puntuacion>
+    <puntuacion id="08">
+      <revista>Wine Spectator</revista>
+      <puntos>91</puntos>
+    </puntuacion>
+    <puntuacion id="09">
+      <revista>Wine Enthusiast</revista>
+      <puntos>86</puntos>
+    </puntuacion>
+    <puntuacion id="10">
+      <revista>Decanter</revista>
+      <puntos>90</puntos>
+    </puntuacion>
+    <puntuacion id="11">
+      <revista>Wine Advocate</revista>
+      <puntos>88</puntos>
+    </puntuacion>
+    <puntuacion id="p12">
+      <revista>Wine Spectator</revista>
+      <puntos>89</puntos>
+    </puntuacion>
+    <puntuacion id="13">
+      <revista>Wine Enthusiast</revista>
+      <puntos>90</puntos>
+    </puntuacion>
+  </puntuaciones>
+</enologia>

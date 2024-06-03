@@ -1,0 +1,125 @@
+EXAMEN XQUERY
+
+-EJERCICIO 1-
+for $vino in doc("vinos.xml")//vinos/vino
+where $vino/tipo= 'Reserva'
+return
+concat(data($vino/nombre),"(",data($vino/precio),"€)")
+
+-EJERCICIO 2-
+-Forma XQUERY-
+for $vino in doc("vinos.xml")//vinos/vino
+order by $vino/nombre
+where $vino/@DO='Ribera del Guadiana'
+return
+concat(data($vino/nombre),"(",data($vino/precio),"€)")
+
+-Forma XPATH-
+for $vino in doc("vinos.xml")//vinos/vino[@DO='Ribera del Guadiana']
+order by $vino/nombre
+return
+concat(data($vino/nombre),"(",data($vino/precio),"€)")
+
+-EJERCICIO 3-
+for $vinos in doc("vinos.xml")//vinos
+let $vinoMedia :=$vinos/vino
+return
+<PrecioMedio>{round((avg($vinoMedia/precio)),2)}€</PrecioMedio>
+
+-EJERCICIO 4-
+for $vino in doc("vinos.xml")//vinos/vino
+where $vino/@DO='Ribera del Duero'
+return
+<SubidaPrecio>{concat(data($vino/nombre),"-",data($vino/tipo),"-",round(data($vino/precio*1.15),2),"€")}</SubidaPrecio>
+
+-EJERCICIO 5-
+for $vino in doc("vinos.xml")//vinos/vino
+for $comentario in doc("vinos.xml")//comentarios/comentario
+where $vino/@cod=$comentario/@idvino and $vino/nombre='Marqués de Murrieta'
+return
+concat(data($vino/nombre)," .",data($comentario/texto))
+
+
+-EJERCICIO 6-
+for $vino in doc("vinos.xml")//vinos/vino
+for $comentario in doc("vinos.xml")//comentarios/comentario
+where $vino/@cod=$comentario/@idvino and $vino/@DO='Ribera del Guadiana' and $vino/precio > 15
+return
+concat(data($vino/nombre),"-",data($comentario/texto))
+
+-EJERCICIO 7-
+let $precioMax :=max(doc("vinos.xml")//vino/precio)
+for $vino in doc("vinos.xml")//vinos/vino
+for $comentario in doc ("vinos.xml")//comentarios/comentario
+where $vino/@cod=$comentario/@idvino and $vino/precio=$precioMax
+return
+concat(data($vino/nombre),"-",data($comentario/texto))
+
+-EJERCICIO 8-
+for $vino in doc("vinos.xml")//vinos/vino
+for $comentario in doc ("vinos.xml")//comentarios/comentario
+for $puntuacion in doc ("vinos.xml")//puntuaciones/puntuacion
+where $vino/@cod=$comentario/@idvino and $vino/@cod=$puntuacion/@id and $vino/nombre="Faustino"
+return concat(($vino),($comentario),($puntuacion))
+
+-EJERCICIO 9-
+<html>
+<body>
+<h1>Información Vino Faustino</h1>
+<table border="1">
+<tr>
+<th>Nombre</th>
+<th>Comentario</th>
+<th>Puntuacion</th>
+</tr>
+{
+  for $vino in doc("vinos.xml")//vinos/vino
+  for $comentario in doc("vinos.xml")//comentarios/comentario
+  for $puntuacion in doc("vinos.xml")//puntuaciones/puntuacion
+  where $vino/@cod=$comentario/@idvino and $vino/@cod=$puntuacion/@id and $vino/nombre="Faustino"
+  return
+  <tr>
+  <td text-align="center">{data($vino/nombre)}</td>
+  <td text-align="center">{data($comentario/texto)}</td>
+  <td text-align="center">{data($puntuacion/puntos)}</td>
+  </tr>
+}
+</table>
+</body>
+</html>
+
+-EJERCICIO 10-
+<html>
+<body>
+<h1>Información Vino Faustino</h1>
+<table border="1">
+<tr>
+<th>Nombre</th>
+<th>Tipo</th>
+<th>Precio</th>
+<th>Comentario</th>
+<th>Revista</th>
+<th>Puntuacion</th>
+</tr>
+{
+  let $precioMax :=max(doc("vinos.xml")//vino/precio)
+  let $precioMin :=min(doc("vinos.xml")//vino/precio)
+  for $vino in doc("vinos.xml")//vinos/vino
+  let $maximo :=("vinos.xml")//vinos
+  for $comentario in doc("vinos.xml")//comentarios/comentario
+  for $puntuacion in doc("vinos.xml")//puntuaciones/puntuacion
+  where $vino/@cod=$comentario/@idvino and $vino/@cod=$puntuacion/@id and ($vino/precio=$precioMax or $vino/precio=$precioMin) 
+  return
+  <tr>
+  <td>{data($vino/nombre)}</td>
+  <td>{data($vino/tipo)}</td>
+  <td>{data($vino/precio)}</td>
+  <td>{data($comentario/texto)}</td>
+  <td>{data($puntuacion/revista)}</td>
+  <td>{data($puntuacion/puntos)}</td>
+  </tr>
+}
+</table>
+</body>
+</html>
+
